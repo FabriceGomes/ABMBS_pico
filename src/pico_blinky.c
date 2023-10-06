@@ -17,7 +17,14 @@ void delay(void)
 
 void blinky_delay(void)
 {
+
+
+
     const int unsigned LED_PIN = PICO_DEFAULT_LED_PIN; /* GPIO 25 */
+
+    gpio_init(LED_PIN);
+gpio_set_dir(LED_PIN,TRUE);
+
     for (;;)
     {
         for (int i = 0; i < 3; i++)
@@ -43,20 +50,24 @@ void blinky_delay(void)
 void blinky_wait(void)
 {
     const int unsigned LED_PIN = PICO_DEFAULT_LED_PIN; /* GPIO 25 */
+
+gpio_init(LED_PIN);
+gpio_set_dir(LED_PIN,TRUE);
+
     for(;;)
     {
         for (int i = 0; i < 3; i++)
         {
-            gpio_put(LED_PIN, 1);
+            gpio_put(LED_PIN, TRUE);
             McuWait_Waitms(500);
-            gpio_put(LED_PIN, 0);
+            gpio_put(LED_PIN, FALSE);
             McuWait_Waitms(500);
         }
         for (int i = 0; i < 3; i++)
         {
-            gpio_put(LED_PIN, 1);
+            gpio_put(LED_PIN, TRUE);
             McuWait_Waitms(2000);
-            gpio_put(LED_PIN, 0);
+            gpio_put(LED_PIN, FALSE);
             McuWait_Waitms(2000);
             
         }
