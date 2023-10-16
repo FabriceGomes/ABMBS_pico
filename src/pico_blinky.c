@@ -3,7 +3,8 @@
 #include "pico_blinky.h"
 #include "platform.h"
 
-
+/// @brief delay with nops
+/// @param  
 void delay(void)
 {
 
@@ -15,6 +16,8 @@ void delay(void)
 
 #if 1
 
+/// @brief blinky with nops
+/// @param  
 void blinky_delay(void)
 {
 
@@ -47,6 +50,9 @@ gpio_set_dir(LED_PIN,TRUE);
 #endif
 
 #if 1
+
+/// @brief blinky with the mculib-waitfunction;
+/// @param  
 void blinky_wait(void)
 {
     const int unsigned LED_PIN = PICO_DEFAULT_LED_PIN; /* GPIO 25 */
