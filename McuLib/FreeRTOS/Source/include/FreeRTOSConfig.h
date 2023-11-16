@@ -188,7 +188,7 @@
   #define configUSE_RECURSIVE_MUTEXES             1
 #endif
 #ifndef configQUEUE_REGISTRY_SIZE
-  #define configQUEUE_REGISTRY_SIZE               5
+  #define configQUEUE_REGISTRY_SIZE               10
 #endif
 #ifndef configUSE_QUEUE_SETS
   #define configUSE_QUEUE_SETS                    1

@@ -3,6 +3,10 @@
     "files.associations": {
         "stdlib.h": "c",
         "platform.h": "c",
-        "leds_config.h": "c"
+        "leds_config.h": "c",
+        "buttons.h": "c",
+        "leds.h": "c",
+        "mcurtos.h": "c",
+        "mcusystemview.h": "c"
     }
 }
